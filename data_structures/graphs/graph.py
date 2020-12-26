@@ -33,12 +33,16 @@ class UndirectedGraph:
 
         return output
 
+    def __len__(self):
+        return len(self.vertices)
+
     def adjacent(self, x, y):
         """Tests whether there is an edge from vertex x to vertex y.
 
         Returns:
             True if there is an edge between x and y, False otherwise.
         """
+        # Check if vertex exists.
         if not all(value in self.vertices for value in [x, y]):
             return False
 
@@ -50,7 +54,12 @@ class UndirectedGraph:
         return self.matrix[idx_x][idx_y] >= 1
 
     def neighbors(self, x):
-        pass
+        """Lists all vertices that are adjacent to x.
+
+        Returns:
+            A list of all vertices adjacent to x.
+        """
+        return [vertex for vertex in self.vertices if self.adjacent(x, vertex)]
 
     def add_vertex(self, value):
         """Adds a vertex to the graph.
@@ -100,27 +109,3 @@ class UndirectedGraph:
 
     def set_edge_value(self, x, y, v):
         pass
-
-
-def main():
-    graph = UndirectedGraph()
-    for i in range(6):
-        graph.add_vertex(i+1)
-
-    graph.add_edge(1, 2)
-    graph.add_edge(1, 4)
-    graph.add_edge(2, 4)
-    graph.add_edge(2, 3)
-    graph.add_edge(4, 3)
-    graph.add_edge(3, 6)
-    graph.add_edge(4, 5)
-    graph.add_edge(5, 6)
-    print(graph)
-
-    print(graph.adjacent(1, 2))
-    print(graph.adjacent(1, 3))
-    print(graph.adjacent(5, 8))
-
-
-if __name__ == "__main__":
-    main()
