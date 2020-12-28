@@ -56,7 +56,7 @@ class TestUndirectedGraphMethods(unittest.TestCase):
         old_len = len(self.filled_graph)
         self.filled_graph.remove_vertex(target)
         self.assertEqual(len(self.filled_graph), old_len)
-        self.assertNotIn(target)
+        self.assertNotIn(target, self.filled_graph.vertices)
 
     def test_add_edge(self):
         # Add edge between existing vertices.

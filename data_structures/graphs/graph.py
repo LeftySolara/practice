@@ -76,7 +76,15 @@ class UndirectedGraph:
         self.matrix.append([0] * len(self.vertices))
 
     def remove_vertex(self, x):
-        pass
+        """Removes a vertex from the graph, if it exists."""
+        if x not in self.vertices:
+            return
+
+        neighbors = self.neighbors(x)
+        for neighbor in neighbors:
+            self.remove_edge(x, neighbor)
+
+        self.vertices.remove(x)
 
     def add_edge(self, x, y):
         """Adds an edge from vertex x to vertex y.
@@ -96,7 +104,14 @@ class UndirectedGraph:
         self.matrix[idx_y][idx_x] = 1
 
     def remove_edge(self, x, y):
-        pass
+        """Removes the egde connecting x and y."""
+        idx_x = self.vertices.index(x)
+        idx_y = self.vertices.index(y)
+
+        # We have to set the value in two places because the
+        # matrix is symmetric.
+        self.matrix[idx_x][idx_y] = 0
+        self.matrix[idx_y][idx_x] = 0
 
     def get_vertex_value(self, x):
         pass
