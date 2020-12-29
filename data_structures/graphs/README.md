@@ -33,7 +33,10 @@ When using an adjacency matrix, data on the edges and vertices must be stored ex
 
 ### Adjacency List
 
-### Common Functionality
+In an **adjacency list** each vertex is stored as an object, and that object stores a list of adjacent vertices.
+This implementation allows for storing additional data on the vertices and edges (if the edges
+are also stored as objects).
+Adjacency lists are more efficient for spare graphs.
 
 ## References
 
