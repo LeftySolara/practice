@@ -112,15 +112,3 @@ class UndirectedGraph:
         # matrix is symmetric.
         self.matrix[idx_x][idx_y] = 0
         self.matrix[idx_y][idx_x] = 0
-
-    def get_vertex_value(self, x):
-        pass
-
-    def set_vertex_value(self, x, v):
-        pass
-
-    def get_edge_value(self, x, y):
-        pass
-
-    def set_edge_value(self, x, y, v):
-        pass
