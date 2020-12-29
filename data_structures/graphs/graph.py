@@ -3,8 +3,6 @@ Basic undirected graph implementations, one using an adjacency list
 and another using an adjacency matrix.
 """
 
-# TODO: Add unit tests
-
 
 class UndirectedGraph:
     """Representation of an undirected graph using an adjacency matrix.
