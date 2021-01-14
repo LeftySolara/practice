@@ -6,4 +6,4 @@ The code contained here is not necessarily the cleanest or most efficient; it is
 in whatever way best helps me understand a given topic. For each topic, I will include 
 a list of references used during my studies.
 
-Many (if not all) of the topics here will end up in my [personal knowledge base](https://docs.jalenkadams.me).
+Many of the topics here will end up in my [personal knowledge base](https://docs.jalenkadams.me).
